@@ -3,3 +3,6 @@ __pycache__
 pub_figs
 TAGC_figs
 .DS_Store
+data
+util_test*
+dv_db.ipynb
