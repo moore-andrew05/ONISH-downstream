@@ -53,7 +53,7 @@ def plot_by_id_1d(df, id, norm_val=10000, new_len=3500, save=None):
     # Plot 1D barcodes using the BarcodePlotter
     plotter.plot_barcodes_single([c1], save=save)
 
-def plot_wrapper_1d(df, norm_value=10000, new_len=3500, save=None):
+def plot_wrapper_1d(df, norm_value=10000, new_len=3500, save=None, channel_index=0):
     """
     Wrapper function to plot 1D barcodes for all entries in a DataFrame.
 
@@ -68,12 +68,12 @@ def plot_wrapper_1d(df, norm_value=10000, new_len=3500, save=None):
     """
     plotter = BarcodePlotter()
     # Normalize and interpolate data for all entries in the DataFrame
-    data = [[interp1d(normalize(datum, norm_value), new_len=new_len)] for datum in df["channel0_arr_vals_raw"].values]
+    data = [[interp1d(normalize(datum, norm_value), new_len=new_len)] for datum in df[f"channel{channel_index}_arr_vals_raw"].values]
     
     # Plot 1D barcodes for all entries
     plotter.plot_barcodes_single(data, save)
 
-def plot_wrapper_2d(df, norm_value=10000, new_len=3500, cmap1=None, cmap2=None, save=None):
+def plot_wrapper_2d(df, norm_value=10000, new_len=3500, cmap1=None, cmap2=None, save=None, channel1_index=0, channel2_index=1):
     """
     Wrapper function to plot 2D barcodes for all entries in a DataFrame.
 
@@ -89,8 +89,8 @@ def plot_wrapper_2d(df, norm_value=10000, new_len=3500, cmap1=None, cmap2=None, 
     """
     plotter = BarcodePlotter()
     res = []
-    data1 = df["channel0_arr_vals_raw"].values
-    data2 = df["channel1_arr_vals_raw"].values
+    data1 = df[f"channel{channel1_index}_arr_vals_raw"].values
+    data2 = df[f"channel{channel2_index}_arr_vals_raw"].values
     for i, _ in enumerate(data1):
         # Normalize and interpolate data for both channels for each entry
         c1 = interp1d(normalize(data1[i], norm_value), new_len=new_len)

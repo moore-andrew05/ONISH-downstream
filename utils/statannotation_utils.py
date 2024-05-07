@@ -41,7 +41,8 @@ def significance_boxplot(df, x, y, order, pairs='all', orient='h'):
 
     # Plot the initial boxplot
     fig, ax = plt.subplots(1)
-    ax = sns.boxplot(data=df, x=x, y=y, order=order)
+    ax = sns.boxplot(data=df, x=x, y=y, order=order, showfliers=False)
+    sns.stripplot(data=df, x=x, y=y, order=order, ax=ax, alpha=0.7, color='0.25')
 
     # Configure and apply the annotations
     annotator = Annotator(ax, pairs, data=df, x=x, y=y, order=order)
@@ -51,7 +52,8 @@ def significance_boxplot(df, x, y, order, pairs='all', orient='h'):
     # If horizontal orientation is specified, create a new plot with horizontal boxplots
     if orient == 'h':
         fig2, ax2 = plt.subplots(1)
-        sns.boxplot(ax=ax2, x=y, y=x, data=df, order=order)
+        sns.boxplot(ax=ax2, x=y, y=x, data=df, order=order, showfliers=False)
+        sns.stripplot(ax=ax2, x=y, y=x, data=df, order=order, alpha=0.7, color='0.25')
 
         # Configure and apply annotations for the horizontal plot
         annotator.new_plot(ax=ax2, plot='boxplot', orient='h', x=y, y=x, order=order, pairs=pairs, data=df)

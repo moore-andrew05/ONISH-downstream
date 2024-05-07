@@ -1,0 +1,49 @@
+                                Mixed Linear Model Regression Results
+======================================================================================================
+Model:                        MixedLM             Dependent Variable:             np.log(peak_sum + 1)
+No. Observations:             990                 Method:                         REML                
+No. Groups:                   110                 Scale:                          12.1951             
+Min. group size:              9                   Log-Likelihood:                 -2699.8530          
+Max. group size:              9                   Converged:                      Yes                 
+Mean group size:              9.0                                                                     
+------------------------------------------------------------------------------------------------------
+                                                            Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------------------------------------------------
+Intercept                                                    5.497    0.791  6.946 0.000  3.946  7.049
+C(diet_and_channel)[T.JUB66_RFP_IN_CEMBIO_0]                 1.300    1.119  1.161 0.245 -0.894  3.494
+C(diet_and_channel)[T.MK_JUB66_RFP_IN_JUB66_0]              -3.652    1.119 -3.263 0.001 -5.846 -1.459
+C(diet_and_channel)[T.OP50_RFP_0]                           -3.190    1.251 -2.549 0.011 -5.642 -0.737
+C(sect)[T.2]                                                -1.646    0.902 -1.826 0.068 -3.413  0.121
+C(sect)[T.3]                                                -0.866    0.902 -0.960 0.337 -2.633  0.901
+C(sect)[T.4]                                                 0.276    0.902  0.306 0.760 -1.491  2.043
+C(sect)[T.5]                                                -0.848    0.902 -0.941 0.347 -2.616  0.919
+C(sect)[T.6]                                                 0.548    0.902  0.608 0.543 -1.219  2.315
+C(sect)[T.7]                                                 1.383    0.902  1.534 0.125 -0.384  3.150
+C(sect)[T.8]                                                 2.414    0.902  2.677 0.007  0.647  4.181
+C(sect)[T.9]                                                 1.987    0.902  2.204 0.028  0.220  3.754
+C(diet_and_channel)[T.JUB66_RFP_IN_CEMBIO_0]:C(sect)[T.2]   -0.336    1.275 -0.264 0.792 -2.836  2.163
+C(diet_and_channel)[T.MK_JUB66_RFP_IN_JUB66_0]:C(sect)[T.2]  0.634    1.275  0.497 0.619 -1.865  3.133
+C(diet_and_channel)[T.OP50_RFP_0]:C(sect)[T.2]               0.831    1.426  0.583 0.560 -1.964  3.625
+C(diet_and_channel)[T.JUB66_RFP_IN_CEMBIO_0]:C(sect)[T.3]    0.474    1.275  0.372 0.710 -2.025  2.973
+C(diet_and_channel)[T.MK_JUB66_RFP_IN_JUB66_0]:C(sect)[T.3]  0.140    1.275  0.110 0.913 -2.359  2.639
+C(diet_and_channel)[T.OP50_RFP_0]:C(sect)[T.3]              -0.997    1.426 -0.699 0.484 -3.791  1.798
+C(diet_and_channel)[T.JUB66_RFP_IN_CEMBIO_0]:C(sect)[T.4]   -0.977    1.275 -0.766 0.444 -3.476  1.522
+C(diet_and_channel)[T.MK_JUB66_RFP_IN_JUB66_0]:C(sect)[T.4] -0.259    1.275 -0.203 0.839 -2.758  2.240
+C(diet_and_channel)[T.OP50_RFP_0]:C(sect)[T.4]              -0.731    1.426 -0.513 0.608 -3.526  2.063
+C(diet_and_channel)[T.JUB66_RFP_IN_CEMBIO_0]:C(sect)[T.5]    0.291    1.275  0.228 0.819 -2.208  2.790
+C(diet_and_channel)[T.MK_JUB66_RFP_IN_JUB66_0]:C(sect)[T.5] -0.079    1.275 -0.062 0.950 -2.579  2.420
+C(diet_and_channel)[T.OP50_RFP_0]:C(sect)[T.5]               1.277    1.426  0.896 0.370 -1.517  4.071
+C(diet_and_channel)[T.JUB66_RFP_IN_CEMBIO_0]:C(sect)[T.6]   -1.559    1.275 -1.222 0.222 -4.058  0.940
+C(diet_and_channel)[T.MK_JUB66_RFP_IN_JUB66_0]:C(sect)[T.6] -1.244    1.275 -0.976 0.329 -3.744  1.255
+C(diet_and_channel)[T.OP50_RFP_0]:C(sect)[T.6]               0.703    1.426  0.493 0.622 -2.091  3.498
+C(diet_and_channel)[T.JUB66_RFP_IN_CEMBIO_0]:C(sect)[T.7]   -4.286    1.275 -3.361 0.001 -6.785 -1.787
+C(diet_and_channel)[T.MK_JUB66_RFP_IN_JUB66_0]:C(sect)[T.7] -2.682    1.275 -2.103 0.035 -5.181 -0.183
+C(diet_and_channel)[T.OP50_RFP_0]:C(sect)[T.7]              -0.586    1.426 -0.411 0.681 -3.380  2.209
+C(diet_and_channel)[T.JUB66_RFP_IN_CEMBIO_0]:C(sect)[T.8]   -4.578    1.275 -3.591 0.000 -7.078 -2.079
+C(diet_and_channel)[T.MK_JUB66_RFP_IN_JUB66_0]:C(sect)[T.8] -3.328    1.275 -2.610 0.009 -5.828 -0.829
+C(diet_and_channel)[T.OP50_RFP_0]:C(sect)[T.8]               0.292    1.426  0.205 0.838 -2.502  3.086
+C(diet_and_channel)[T.JUB66_RFP_IN_CEMBIO_0]:C(sect)[T.9]   -3.930    1.275 -3.082 0.002 -6.430 -1.431
+C(diet_and_channel)[T.MK_JUB66_RFP_IN_JUB66_0]:C(sect)[T.9] -3.832    1.275 -3.005 0.003 -6.331 -1.333
+C(diet_and_channel)[T.OP50_RFP_0]:C(sect)[T.9]               0.473    1.426  0.331 0.740 -2.322  3.267
+ID Var                                                       6.598    0.332                           
+======================================================================================================
